@@ -285,7 +285,8 @@
 
     $.post("/api/friends", newFriend, function(data) {
       alert("We're analyzing your responses!");
-
+      console.log(data.name);
+      $("#topMatch").text(`${data.name}: With a ${data.friendDifference} point difference in your survey score!!`);
 
       // Clear the form when submitting
       $("#uNameInput").val("");

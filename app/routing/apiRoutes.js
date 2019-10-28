@@ -48,6 +48,7 @@ module.exports = function(app) {
     console.log("new best match:", bestMatch);
     friendsData.push(req.body);
     console.log(req.body);
+    res.json(bestMatch);
     res.json(true);
   });
 };
